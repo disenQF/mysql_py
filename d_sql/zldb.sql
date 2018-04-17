@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 5.1.63, for apple-darwin10.3.0 (i386)
+--
+-- Host: localhost    Database: zldb
+-- ------------------------------------------------------
+-- Server version	5.1.63
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `zw`
+--
+
+DROP TABLE IF EXISTS `zw`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `zw` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) DEFAULT NULL,
+  `summary` text NOT NULL,
+  `salary` float DEFAULT NULL,
+  `company` varchar(200) DEFAULT NULL,
+  `publish_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `_year` varchar(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zw`
+--
+
+LOCK TABLES `zw` WRITE;
+/*!40000 ALTER TABLE `zw` DISABLE KEYS */;
+INSERT INTO `zw` VALUES (1,'Python开发工程师','',9.6,NULL,'2018-03-07 08:47:45','2018'),(3,'Python WEB 开发工程师','',16,NULL,'2018-03-07 08:47:45','2018'),(4,'Python 人工智能 开发工程师','',40,NULL,'2018-03-07 08:47:45','2018'),(5,'JavaWEB 开发工程师','',22,NULL,'2018-03-07 08:47:45','2018'),(6,'Java高级开发工程师','',28,NULL,'2017-11-21 05:10:10','2017'),(7,'Python高级开发工程师','',35,NULL,'2017-10-09 09:21:19','2017'),(9,'Java开发工程师','',23,NULL,'2016-11-21 05:10:10','2017'),(10,'Java 开发工程师','',23,NULL,'2016-11-21 05:10:10','2016');
+/*!40000 ALTER TABLE `zw` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-03-07 17:02:55
