@@ -62,3 +62,9 @@ create table trade
  constraint to_card_id_fk foreign key(to_card_id) references card(id),
  constraint t_bank_id_fk foreign key(bank_id) references bank(id)
 );
+
+alter table card add state enum('Y','N') default 'Y' comment "Y 正常, N注销";
+
+INSERT INTO card VALUES
+(3,'918888319292876521',md5('345'),10,2,3,'N');
+
