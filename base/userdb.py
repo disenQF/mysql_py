@@ -34,9 +34,6 @@ class UserDB:
         userData = self.db.query("select * from user where id=%s", (uid))
         return User.toUser(**userData[0])
 
-    def __del__(self):
-        self.db.close()
-
 
 if __name__ == '__main__':
     db = DB('127.0.0.1', 'banks')

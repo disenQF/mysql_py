@@ -42,8 +42,11 @@ class Card:
 
     @classmethod
     def toCard(cls, **card):
-        print(card)
-        pass
+        return Card(card.get("number"),
+                    card.get("passwd"),
+                    card.get("money"),
+                    card.get("user"),
+                    card.get("bank"))
 
 
 class Trade:
